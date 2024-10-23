@@ -55,7 +55,7 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
       - run: pnpm install
       - run: pnpm build
-      - run: npm publish --access public
+      - run: npm publish --access public --registry=https://npm.pkg.github.com
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NPM_CONFIG_PROVENANCE: true
