@@ -1,0 +1,7 @@
+/build
+/.tauri
+.gradle
+gradle
+gradlew
+gradlew.bat
+local.properties
