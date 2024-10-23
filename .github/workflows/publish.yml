@@ -41,6 +41,7 @@ jobs:
     needs: Release
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       packages: write
       id-token: write
     steps:
@@ -52,8 +53,7 @@ jobs:
           cache: "pnpm"
           registry-url: "https://npm.pkg.github.com"
       - run: pnpm install
-      - run: pnpm pkg set publishConfig.registry=https://npm.pkg.github.com
-      - run: pnpm publish --access public --no-git-checks
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NPM_CONFIG_PROVENANCE: true
