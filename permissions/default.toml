@@ -1,4 +1,4 @@
 "$schema" = "schemas/schema.json"
 [default]
-description = "Default permissions for the plugin"
+description = "Default permissions for the plugin app-exit."
 permissions = ["allow-exit-app"]
