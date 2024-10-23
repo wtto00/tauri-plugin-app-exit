@@ -32,7 +32,7 @@ jobs:
       - run: pnpm install
       - run: git config --global user.name "wtto00"
       - run: git config --global user.email "wtto00@outlook.com"
-      - run: pnpm publish --access public
+      - run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
@@ -52,7 +52,7 @@ jobs:
           cache: "pnpm"
           registry-url: "https://npm.pkg.github.com"
       - run: pnpm install
-      - run: pnpm publish --access public
+      - run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NPM_CONFIG_PROVENANCE: true
