@@ -52,6 +52,7 @@ jobs:
           cache: "pnpm"
           registry-url: "https://npm.pkg.github.com"
       - run: pnpm install
+      - run: pnpm pkg set publishConfig.registry=https://npm.pkg.github.com
       - run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
