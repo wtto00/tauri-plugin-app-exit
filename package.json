@@ -1,6 +1,6 @@
 {
   "name": "tauri-plugin-app-exit-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "wtto00 <wtto00@outlook.com>",
   "description": "A plugin for tauri@v2 to exit app.",
   "type": "module",
@@ -18,6 +18,7 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
+    "prepublishOnly": "pnpm build",
     "pretest": "pnpm build",
     "format": "cargo fmt --all"
   },
