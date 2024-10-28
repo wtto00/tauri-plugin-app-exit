@@ -177,7 +177,7 @@
       "description": "Permission identifier",
       "oneOf": [
         {
-          "description": "Default permissions for the plugin",
+          "description": "Default permissions for the plugin app-exit.",
           "type": "string",
           "const": "app-exit:default"
         },
