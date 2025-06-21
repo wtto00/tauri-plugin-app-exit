@@ -60,7 +60,7 @@ Install the app-exit plugin to get started.
 ## Usage
 
 ```js
-import { exitApp } from tauri-plugin-app-exit-api";
+import { exitApp } from "tauri-plugin-app-exit-api";
 
 exitApp().catch(err => {
   console.error(err)
